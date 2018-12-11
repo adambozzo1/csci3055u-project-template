@@ -1,10 +1,7 @@
-# _Your project title_
+# CSCI3055U Final Project \nRust Programming Language
 
-CSCI3055U Final Project
-Rust Programming Language
-
-Name: Adam Bozzo
-Email: adam.bozzo1@uoit.net
+Adam Bozzo
+adam.bozzo1@uoit.net
 
 ## About the language
 
