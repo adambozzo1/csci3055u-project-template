@@ -1,4 +1,4 @@
-# CSCI3055U Final Project \nRust Programming Language
+# CSCI3055U Final Project: Rust Programming Language
 
 Adam Bozzo
 adam.bozzo1@uoit.net
