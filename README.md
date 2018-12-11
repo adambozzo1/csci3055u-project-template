@@ -1,7 +1,10 @@
 # _Your project title_
 
-- _your name_
-- _your email (uoit.net)_
+CSCI3055U Final Project
+Rust Programming Language
+
+Name: Adam Bozzo
+Email: adam.bozzo1@uoit.net
 
 ## About the language
 
