@@ -11,9 +11,12 @@ The rust programming language started out of a project in 2006 by Graydoan Hoare
       
 *Interesting Features*
 
-## About the syntax
+Some interesting features about rust are:
+- you do not need to declare your type of variable, similarly to python this is inferred by the compiler
+- allows you to have the optionality of deciding whether variables are mutable or not
+- A feature on rust called ownership enables rust to have very safe memory guarentees without a garbage collector.
 
-> _give some code snippet of the language_
+## About the syntax
 
 *Variables*
 
@@ -205,7 +208,23 @@ There are many different open source contributions for rust, the one that I will
 
 # Analysis of the language
 
-> _Organize your report according to the project description
-document_.
+*Analysis of Language*
+Rust is not a functional programming language, it is a procedural. Despite the fact that it is not primarily a functional programming language it is possible to code programs using a functional style in rust, this gives the language much versatility. Rust does in fact support meta programming and has different pattern matching tools. It has a very simple to use and powerful macro system that enables meta programming. Macros in rust basically look like functions but they end with a !. Macros are expanded into abstract synax trees which allows them to not give unexpected bugs. An example of a declaration for a macro tool would just simply be declaring it with the keyword macro_rules!, example of this is:
+
+```
+macro_rules! test{ 
+	() =>(
+		println!("testing!!");
+	)
+}
+```
+Rust also supports closure which allows us to wrap up free variables for easier reuse and clarity. When the free variables are used in a closed scope they become closed over meaning they are free to be used later on. An example of rust using closure is:
+```
+let adding_stuff = |y: i32| y + 5;
+```
+The variable y in this example is specificly stuck in the scope of adding_stuff and is a free variable once this line is finished executing.
+
+Rust supports lexical scoping much like more of the major programming languages such as Java and C++, meaning that based on where the variable is declared it will be mutable and useable at any lower level scopes. It is not like dynamic scoping where it is more based on the specific scope you are currently working in. Rust also supports dynamic types through the use of something called trait objects and static/dynamic dispatches. Rust primarily focuses on favoring static dispatch but it also can do dynamic dispatching through trait objects. This allows us to change the type of the object we are working with. Some disadvantages of the rust programming language is that it is very explicit which sometimes can create very convoluted code and be jarring for beginners. Almost everything in rust is done very explicitly and in your face which allows a greater degree of control as a programmer but can sometimes be too much. Another disadvantage of the rust programming language is that it is very lack luster in comparison to other langauges in terms of supporting graphic user interfaces. Some advantages of rust is that rust is a very safe language to use, it is also very fast in comparison to a language such as java. It also has very good pattern matching abilities and overall is a very versatile language that gives you many different options on what you want to do.
+
 
 
