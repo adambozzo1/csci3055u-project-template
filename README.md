@@ -18,7 +18,7 @@ adam.bozzo1@uoit.net
 
 *Variables*
 
-In rust you use the let keyword to declare variables. The variables that you declare are by default immutable, this means that you cannot assign them new values. For example, in the following snippet of code y will not be reassigned to 5 since y is immutable.
+In rust you use the let keyword to declare variables. When creating variable names in rust, for the basic variables they must always be snake name case. This means that they must be formated as "name_second", you cannot have a name as "nameSecond" for example. The variables that you declare are by default immutable, this means that you cannot assign them new values. For example, in the following snippet of code y will not be reassigned to 5 since y is immutable.
 ```
 let y = 10;
 y = 5;
@@ -48,6 +48,23 @@ println!("Array index 0: {}", array[0]);
 println!("Array index 1: {}", array[1]);
 ```
 
+*Functions*
+
+Every rust program starts at the main function, the fn main(){}. You can also create other functions and call them from the main function. You can also set paramaters as well as return values from them. An example of this is:
+```
+fn main(){
+     println!("Main function start!");
+     let x = second_function(10);
+     println!("x");
+}
+fn second_function(y: i32)-> i32{
+      y + 40
+}
+```
+Note that the -> i32 indicates that it is returning an integer, if you wanted to return nothing you would leave that empty. Also note that on the line y+40 you do not use a semi-colon in order to indicate it is returning. When you are indicating the paramter receiving you use name: datatype, in order to declare the variable to the appropriate data type.
+
+*Conditionals*
+
 If statements in rust are very useful for when you need a conditional statement. An example of an if statement and an if else statement syntax is:
 ```
 let y = 4;
@@ -69,7 +86,7 @@ let number = if y == 4 {
       };
 ```
 
-Loops in Rust:
+*Loops*
 
 In rust there are many different types of loops, the first one we are going to look at is the "loop" loop. This loop will repeatededly run forever without conditions. A way to break out of this loop would be to use the break keyword with conditions. You can also use loops to return a value when it breaks. An example of this loop is:
 
