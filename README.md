@@ -126,6 +126,7 @@ In rust there are two different ways you can compile and run your program. The f
 ## About the standard library
 
 *Standard Library*
+
 Rust has a very large standard library that provides multiple different data structures that can be used. Some of these data structures that I will be going over are hash maps, vectors and queues.
 
 The first collection I will be talking about are hash maps, hashmaps are a very useful standard library that allow you to store values based on their keys. Different methods for this library are:
