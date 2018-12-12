@@ -5,12 +5,11 @@ adam.bozzo1@uoit.net
 
 ## About the language
 
-> _Describe the language_
->
-> - History
-      The rust programming language started out of a project in 2006 by Graydoan Hoare. Rust was officially announced in 2010 and the compiler was up and working by 2011. Its first stable release was in 2015 and since then has been constantly improved upon.
+*History*
+
+The rust programming language started out of a project in 2006 by Graydoan Hoare. Rust was officially announced in 2010 and the compiler was up and working by 2011. Its first stable release was in 2015 and since then has been constantly improved upon.
       
-> - Some interesting features
+*Interesting Features*
 
 ## About the syntax
 
@@ -121,7 +120,7 @@ for element in array.iter(){
 ## About the tools
 
 In rust there are two different ways you can compile and run your program. The first way would be through using the compiler rustc to compile your program, once compiled you can run your program using ./nameofcompiledprogram. You can get rustc by using the command:
-"curl https://sh.rustup.rs -sSf | sh" in your linux terminal, or you can visit the website https://www.rust-lang.org/tools/install for more information on how to install it. Rust is very similar to C++, in which you compile your program and then run it unlike other languages where it is all done at once. Additionally, you can use Cargo to compile and run programs. Cargo is a Rust build system and package manager, cargo is specifically very good at managing projects as well as adding dependencies and other libraries. Cargo will compile the program and run during one command as opposed to rustc where you must first compile and then run. In order to create a cargo project you need to type cargo new "project_name" and in order to compile and run the program you type cargo run in your terminal/shell. There are also some different IDE's that you can use to compile and run your code, an example of some of these would be IDEA and Emacs.
+"curl https://sh.rustup.rs -sSf | sh" in your linux terminal, or you can visit the website https://www.rust-lang.org/tools/install for more information on how to install it. Rust is very similar to C++, in which you compile your program and then run it unlike other languages where it is all done at once. Additionally, you can use Cargo to compile and run programs. Cargo is a Rust build system and package manager, cargo is specifically very good at managing projects as well as adding dependencies and other libraries. It is basically required to use cargo when doing any sort of large scale project with mutliple dependencies. Cargo will compile the program and run during one command as opposed to rustc where you must first compile and then run. In order to create a cargo project you need to type cargo new "project_name" and in order to compile and run the program you type cargo run in your terminal/shell. There are also some different IDE's that you can use to compile and run your code, an example of some of these would be IDEA and Emacs.
 
 ## About the standard library
 
@@ -130,8 +129,9 @@ In rust there are two different ways you can compile and run your program. The f
 
 ## About open source library
 
-> _Describe at least one contribution by the open source
-community written in the language._
+*Open Source Contributions*
+
+There are many different open source contributions for rust, the one that I will be talking about is the Actix web open source library. This library can be found at https://github.com/actix/actix-web. This open source library is a fast web framework designed for rust. Its main purpose is to provide a way to create a web framework from rust efficiently and fast. It is very useful when developing servers. Some examples of the different things it can provide are: client/server WebSockets support, streaming and pipelining, confiurable request routing, has a http client, as well as many other things. It is build ontop of the other open source library called Actix actor framework. In order to use it you must included it in your dependencies under your cargo project.
 
 # Analysis of the language
 
