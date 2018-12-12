@@ -125,8 +125,76 @@ In rust there are two different ways you can compile and run your program. The f
 
 ## About the standard library
 
-> _Give some examples of the functions and data structures
-> offered by the standard library_.
+*Standard Library*
+Rust has a very large standard library that provides multiple different data structures that can be used. Some of these data structures that I will be going over are hash maps, vectors and queues.
+
+The first collection I will be talking about are hash maps, hashmaps are a very useful standard library that allow you to store values based on their keys. Different methods for this library are:
+"name".insert(key, value); This allows you to insert a key and value into the hash map
+"name".contains_key("key"); this returns a boolean that checks to see if the key exists in the map
+"name".remove("key"); this removes a key from the hashmap
+
+An example of a hashmap in rust and iterating over the map is:
+```
+
+use std::collections::HashMap;
+let mut names_grades = HashMap::new();
+
+names_grades.insert(
+	"John".to_string(),
+	54,
+);
+names_grades.insert(
+	"Adam".to_string(),
+	74,
+);
+names_grades.insert(
+	"Jessica".to_string(),
+	92,
+);
+for (names, grades) in &names_grades {
+    println!("{}: \"{}\"", names, grades);
+}
+```
+
+The second collection I will talk about is the vector collection. The strength with vectors is that it is a dynamically sized array, meaning you can contiuously change the size of it without having to reinstansiate the array. Some different methods that you can use with a vector are:
+"name".push(value); this pushes a specified value onto the vector
+"name".pop(); this removes the top most element of the vector and returns it
+"name".len(); this returns the size of the vector
+"name".extend(); will extend the vector with values specified
+
+An example of a vector is:
+```
+let mut vec = Vec::new();
+vect.push(40);
+vect.push(20);
+vect.push(10);
+vect[1] = 15;
+for index in &vect {
+    println!("{}", index);
+}
+```
+
+An alternative way to declare vectors is using the vec! keyword. An example of this is:
+```
+let vect = vec![10,20,30,40,50];
+```
+
+The third standard library collection I will be going over is the VecDequeue collection. This collection basically acts as a list where it is very volatile and can be used with all 4 variants (First in First out, First in Last out, Last in First out and Last in Last out). Queues iterate front to back. Some different methods you can use with a VecDequeue are:
+"name".push_back(value); this adds a value to the back of the queue
+"name".pop_front(); this removes the front of the queue and returns it
+"name".pop_back(); removes element from the back of the queue and returns it 
+"name".push_front(value); adds element to the front of the queue
+"name".swap(index 1, index 2); this swaps two elements in the queue
+
+An example of a queue this in rust is:
+```
+use std::collections::VecDeque;
+let mut queue = VecDeque::new();
+queue.push_back(3);
+queue.push_back(4);
+queue.push_back(5);
+queue.pop_front();
+```
 
 ## About open source library
 
