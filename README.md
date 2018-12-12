@@ -8,18 +8,36 @@ adam.bozzo1@uoit.net
 > _Describe the language_
 >
 > - History
+      The rust programming language started out of a project in 2006 by Graydoan Hoare. Rust was officially announced in 2010 and the compiler was up and working by 2011. Its first stable release was in 2015 and since then has been constantly improved upon.
+      
 > - Some interesting features
 
 ## About the syntax
 
 > _give some code snippet of the language_
 
-*Let form*
+*Variables*
 
-```clojure
-(let [x 10
-      y 20]
-  (+ x y))
+In rust you use the let keyword to declare variables. The variables that you declare are by default immutable, this means that you cannot assign them new values. For example, in the following snippet of code y will not be reassigned to 5 since y is immutable.
+```
+let y = 10;
+y = 5;
+```
+In order for your variables to be mutable you must use the mut keyword when declaring them. In this example x will be reassigned.
+```
+let mut y = 10;
+y = 5;
+```
+Additionally, even if the variable is mutable, it cannot change types. So if you have a string type you cannot reassign it to an int.
+The code below will not work.
+```
+let mut y = "Hello";
+y = 10;
+
+```
+In rust you can also declare constant variables that are not able to be altered, you use the const keyword to specify them and they would be used for variables that you want to always remain the same like gravity acceleration.
+```
+const GRAVITY = 9.81;
 ```
 
 ## About the tools
