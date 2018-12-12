@@ -1,10 +1,11 @@
+
 //program that converts string to morse code
 fn main(){
 	use std::collections::HashMap;
 	let mut mor_keys = HashMap::new();
 
-	mor_keys.insert("A".to_string(),".-".to_string(),);
-	mor_keys.insert("B".to_string(),"-...".to_string(),);
+	mor_keys.insert("A",".-",);
+	/*mor_keys.insert("B".to_string(),"-...".to_string(),);
 	mor_keys.insert("C".to_string(),"-.-.".to_string(),);
 	mor_keys.insert("D".to_string(),"-..".to_string(),);
 	mor_keys.insert("E".to_string(),".".to_string(),);
@@ -29,12 +30,14 @@ fn main(){
 	mor_keys.insert("W".to_string(),"-.--".to_string(),);
 	mor_keys.insert("Y".to_string(),"-.--".to_string(),);
 	mor_keys.insert("Z".to_string(),"--..".to_string(),);
-	
-	let text = "HEYTHERE".to_string();
-	let convertedText = "".to_string();
-	
-	for i in text.chars(){
-		
+	*/
+	let text = "HEYTHERE";
+	let mut converted_text: String = "".to_owned();
+	println!("{}", converted_text);
+	for index in text.chars(){
+	    let ind: String = index.to_owned().to_string();
+		let temp: String = mor_keys.get(&ind).as_ref().map(|x| &**x).unwrap_or(&"default string").to_owned().to_string();
+		converted_text = format!("{}{}", converted_text, temp);
 	}
-
+	println!("{}",converted_text);
 }
